@@ -1,0 +1,43 @@
+doctype html
+html(lang="fr")
+    head
+        title 🧠 RAG Chat Bot - Ollama
+        link(rel="stylesheet", href="/styles.css")
+        meta(charset="utf-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1")
+        meta(name="description", content="Chatbot RAG local avec Ollama - 100% gratuit")
+    
+    body
+        .container
+            // Header
+            .header
+                h1 🧠 Assistant IA - RAG
+                p Recherche intelligente dans vos documents
+                .status-badge
+                    .status-dot
+                    span Ollama • 100% Local & Gratuit
+            
+            // Chat Container
+            .chat-container
+                // Messages Area
+                #messages.messages-area
+                    .welcome-message
+                        i.fas.fa-robot
+                        p Bonjour ! Comment puis-je vous aider aujourd'hui ?
+                        p.subtitle Posez une question sur vos documents et je chercherai les informations pertinentes
+                
+                // Input Area
+                .input-area
+                    .input-container
+                        input#userInput(
+                            type="text"
+                            placeholder="Tapez votre question..."
+                            autocomplete="off"
+                            maxlength="500"
+                        )
+                        button#sendBtn.send-button
+                            i#sendIcon.fas.fa-paper-plane
+                            span#sendText Envoyer
+
+        // Scripts
+        script(src="/app.js")
